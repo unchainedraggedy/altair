@@ -543,7 +543,6 @@ body {
   gap: 112px;
   max-width: 100%;
   margin: 64px 35px;
-/* это margin в рамках макета, потом его надо стереть   */
 }
 .product-article{
   box-sizing: border-box;
