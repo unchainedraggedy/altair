@@ -52,7 +52,7 @@ body {
   text-transform: uppercase;
 
   color: #ffffff;
-  background-image: url("images/banner-bg.jpg");
+  background-image: url(../images/banner-bg.jpg);
   background-size: cover;
 }
 .header::after {
@@ -150,16 +150,16 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .article1 {
-  background-image: url("images/trend1.jpg");
+  background-image: url(../images/trend1.jpg);
 }
 .article2 {
-  background-image: url("images/trend2.jpg");
+  background-image: url(../images/trend2.jpg);
 }
 .article3 {
-  background-image: url("images/trend3.jpg");
+  background-image: url(../images/trend3.jpg);
 }
 .article4 {
-  background-image: url("images/trend4.jpg");
+  background-image: url(../images/trend4.jpg);
 }
 .trends-content {
   position: relative;
@@ -324,7 +324,7 @@ body {
   aspect-ratio: 1 / 1;
   padding: 10px;
 
-  background-image: url("svg/001-dribbble.svg");
+  background-image: url(../svg/search.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40%;
@@ -607,13 +607,13 @@ body {
   aspect-ratio: 1 / 1;
 }
 .social1 {
-  background-image: url("svg/001-dribbble.svg");
+  background-image: url(../svg/001-dribbble.svg);
 }
 .social2 {
-  background-image: url("/svg/001-pinterest.svg");
+  background-image: url(../svg/001-pinterest.svg);
 }
 .social3 {
-  background-image: url("svg/004-twitter.svg");
+  background-image: url(../svg/004-twitter.svg);
 }
 .copyright {
   font-size: 12px;
