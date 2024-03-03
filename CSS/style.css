@@ -150,13 +150,13 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .article1 {
-  background-image: url(../images/trend1.jpg);
+  background-image: url("../images/trend1.jpg");
 }
 .article2 {
-  background-image: url(../images/trend2.jpg);
+  background-image: url("../images/trend2.jpg");
 }
 .article3 {
-  background-image: url(../images/trend3.jpg);
+  background-image: url("../images/trend3.jpg");
 }
 .article4 {
   background-image: url(../images/trend4.jpg);
