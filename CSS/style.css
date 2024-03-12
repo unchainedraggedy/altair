@@ -1,13 +1,11 @@
 @font-face {
-  font-family: "OpenSans";
-  src: url("fonts/OpenSans-Regular.woff2") format ("woff2"),
-    url("fonts/OpenSans-Regular.woff") format ("woff");
+  font-family: OpenSans;
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
   font-weight: normal;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("/fonts/OpenSans-Bold.woff2") format ("woff2"),
-    url("fonts/OpenSans-Bold.woff") format("woff");
+  font-family: OpenSans;
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
   font-weight: bold;
 }
 :root {
@@ -41,7 +39,8 @@ h4 {
   text-transform: uppercase;
 }
 body {
-  font-family: "OpenSans", "Helvetica", sans-serif;
+  min-width: 1660px;
+  font-family: "OpenSans", "Tahoma", sans-serif;
 }
 .header {
   position: relative;
@@ -52,10 +51,10 @@ body {
   text-transform: uppercase;
 
   color: #ffffff;
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url("../images/banner-bg.jpg");
   background-size: cover;
 }
-.header::after {
+.header:after {
   content: "";
 
   position: absolute;
@@ -68,9 +67,10 @@ body {
 }
 .wrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.header-nav {
+.header-nav-wrp{
   position: relative;
   z-index: 1;
 
@@ -90,8 +90,8 @@ body {
 
   font-size: 13px;
 }
-.menu-list:nth-child(n-1) {
-  margin-right: 30px;
+.menu-list:nth-child(n+2){
+  margin-left: 30px;
 }
 .menu-list:hover {
   text-decoration: underline;
@@ -128,7 +128,7 @@ body {
   justify-content: center;
   align-items: end;
 
-  max-width: 25%;
+  width: 25%;
   min-height: 320px;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -159,9 +159,19 @@ body {
   background-image: url("../images/trend3.jpg");
 }
 .article4 {
-  background-image: url(../images/trend4.jpg);
+  background-image: url("../images/trend4.jpg");
 }
+/* .trends-img{
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+} */
 .trends-content {
+  /*   position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1; */
   position: relative;
   z-index: 1;
 
@@ -197,8 +207,6 @@ body {
 }
 .main-article-img {
   width: 50%;
-  max-height: 294px;
-
   object-fit: contain;
 }
 .main-tags {
@@ -210,9 +218,10 @@ body {
   color: #b59f5b;
 }
 .main-tags-item {
-  margin-right: 20px;
-
   font-size: 14px;
+}
+.main-tags-item:nth-child(n+2){
+  margin-left: 20px;
 }
 .main-tags-item:hover {
   text-decoration: underline;
@@ -242,7 +251,7 @@ body {
   font-size: 15px;
 }
 .sidebar {
-  width: 18rem;
+  width: 340px;
 }
 .section:nth-child(n + 2) {
   margin-top: 63px;
@@ -261,8 +270,8 @@ body {
   font-size: 14px;
   text-align: center;
 }
-.section-title:after {
-  content: "";
+.title-decor:after {
+  content: " ";
   position: absolute;
   bottom: -50%;
   left: 50%;
@@ -279,8 +288,8 @@ body {
 }
 .section-time {
   display: block;
-  font-size: 0.75rem;
   text-align: left;
+  font-size: 0.75rem;
 }
 .post-title {
   font-size: 14px;
@@ -292,6 +301,7 @@ body {
 .form {
   position: relative;
 
+  display: flex;
   margin: 0 auto;
 }
 .search-form {
@@ -307,6 +317,8 @@ body {
   border: 1px solid #b59f5b;
 }
 .button {
+  font-weight: bold;
+  text-transform: uppercase;
   color: white;
   background: #b59f5b;
 
@@ -316,15 +328,14 @@ body {
   background-color: #323232;
 }
 .search-button {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0;
-
+  right: 0;  that how it worked */ 
   min-height: 46px;
   aspect-ratio: 1 / 1;
   padding: 10px;
 
-  background-image: url(../svg/search.svg);
+  background-image: url("../svg/search.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40%;
@@ -349,6 +360,10 @@ body {
   text-align: center;
 }
 .newsletter-form {
+  /*   display: flex;
+  flex-direction: column;
+  gap: 10px; */
+
   margin-top: 40px;
 }
 .email-form {
@@ -368,9 +383,7 @@ body {
   display: block;
   width: 100%;
   min-height: 46px;
-
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-top: 15px;
 }
 .section-tags {
   font-weight: bold;
@@ -397,7 +410,13 @@ body {
 .section-themes {
   font-weight: bold;
 }
+/* .themes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} */
 .themes-list-item {
+  position: relative;
   display: block;
   margin-bottom: 10px;
   padding-bottom: 15px;
@@ -409,24 +428,83 @@ body {
 .themes-list-item:hover {
   color: #b59f5b;
 }
-.list-item-number {
+.themes-item-number {
+  position: absolute;
+  top: -5px;
+  margin-left: 5px;
   color: #b59f5b;
 }
-.feedback-title{
-  text-transform: uppercase;
+.products-title {
+  position: relative;
+  text-align: center;
 }
-.popup-toggle{
+.product-wrp {
+  display: flex;
+  justify-content: space-between;
+  gap: 112px;
+  max-width: 100%;
+  margin: 64px 35px;
+  /* это margin в рамках макета, потом его надо стереть   */
+}
+.product-article {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+}
+.product-img {
+  display: block;
+  width: 100%;
+}
+.product-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  outline: 3px solid #b59f5b;
+  outline-offset: 30px;
+}
+.product-link {
+  color: #b59f5b;
+}
+.product-link:hover {
+  text-decoration: underline;
+}
+.product-price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.price {
+  display: block;
+  font-weight: bold;
+}
+.old-price {
+  font-size: 0.8em;
+  text-decoration: line-through;
+}
+.product-btn {
+  width: 143px;
+  min-height: 50px;
+}
+._hidden{
   display: none;
 }
-.popup-toggle:checked + .popup{
+.feedback-title {
+  text-transform: uppercase;
+}
+.popup-toggle {
+  display: none;
+}
+.popup-toggle:checked + .popup {
   display: flex;
 }
-.popup{
+.popup {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 50;
   display: none;
   justify-content: center;
   align-items: center;
@@ -434,76 +512,84 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.popup-content{
+.popup-content {
   position: relative;
   width: 390px;
-  height: 590px;
+  
   background-color: #ffffff;
 }
-.popup-close{
+/* .popup-close {
   position: absolute;
   top: -40px;
   right: 0;
   font-size: 30px;
   color: #ffffff;
+} */
+.popup-close-btn{
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../svg/form-x.svg");
+  background-color: transparent;
 }
-.popup-form{
+.popup-form {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 30px;
   font-size: 15px;
 }
-.form-title{
+.form-title {
   position: relative;
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
 }
-
-.select-label{
+.select-label {
   display: block;
 }
-.field{
+.field {
   display: block;
   margin-bottom: 12px;
 }
-.select{
+.select {
   -moz-appearance: none;
   -webkit-appearance: none;
   width: 100%;
   height: 45px;
   padding-left: 18px;
-  
+
   background-color: #f4f7f6;
   color: #919191;
   outline: none;
   border: none;
 }
-.select:hover{
+.select:hover {
   border-bottom: 1px solid #ebe7d7;
 }
-.radio-input{
+.radio-input {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.radio-label{
- position: relative;
- margin-left: 30px;
+.radio-label {
+  position: relative;
+  margin-left: 30px;
 }
-.radio-input:before{
-  content: '';
+.radio-input:before {
+  content: "";
   position: absolute;
   top: 2px;
   left: -20px;
-  
+
   width: 15px;
   aspect-ratio: 1 / 1;
   border: 1px solid #d4c8a0;
   border-radius: 50%;
 }
-.radio-input:checked:before{
-  content: '';
+.radio-input:checked:before {
+  content: "";
   position: absolute;
   top: 5px;
   left: -20px;
@@ -514,7 +600,7 @@ body {
   outline: solid #d4c8a0;
   outline-offset: 2px;
 }
-.textarea{
+.textarea {
   min-width: 100%;
   max-width: 100%;
   min-height: 130px;
@@ -525,66 +611,15 @@ body {
   background-color: #f4f7f6;
   padding: 18px;
 }
-.textarea:focus{
+.textarea:focus {
   border-bottom: 1px solid #ebe7d7;
 }
-.send-button{
+.send-button {
   width: 100%;
   height: 47px;
   font-size: 14px;
 }
-.products-title{
-  position: relative;
-  text-align: center;
-}
-.product-wrp{
-  display: flex;
-  justify-content: space-between;
-  gap: 112px;
-  max-width: 100%;
-  margin: 64px 35px;
-/* это margin в рамках макета, потом его надо стереть   */
-}
-.product-article{
-  box-sizing: border-box;
-  width: calc(100% / 3);
-}
-.product-img{
-  display: block;
-  width: 100%;
-}
-.product-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 265px;
-  outline: 3px solid #b59f5b;
-  outline-offset: 30px;
-}
-.product-link{
-  color: #b59f5b;
-}
-.product-link:hover{
-  text-decoration: underline;
-}
-.product-price-btn{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.price{
-  display: block;
-  font-weight: bold;
-}
-.old-price{
-  font-size: 0.8em;
-  text-decoration: line-through;
-}
-.product-btn{
-  width: 143px;
-  min-height: 50px;
-}
+
 .footer {
   width: 72%;
   margin-left: auto;
@@ -607,15 +642,23 @@ body {
   aspect-ratio: 1 / 1;
 }
 .social1 {
-  background-image: url(../svg/001-dribbble.svg);
+  background: url("../svg/001-dribbble.svg");
 }
 .social2 {
-  background-image: url(../svg/001-pinterest.svg);
+  background: url("../svg/002-pinterest.svg");
 }
 .social3 {
-  background-image: url(../svg/004-twitter.svg);
+  background: url("../svg/003-tumblr.svg");
 }
 .copyright {
   font-size: 12px;
   color: #999999;
 }
+/* это я добавила 8 марта */
+.select{
+  background-image: url("../svg/form-arrows.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 10px center;
+}
+
