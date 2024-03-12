@@ -419,8 +419,8 @@ body {
   gap: 10px;
 } */
 .themes-list-item {
-/*   /* position: relative; */
-  display: block; */
+  position: relative;
+  display: block; 
   margin-bottom: 10px;
   padding-bottom: 15px;
 
