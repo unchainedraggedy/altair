@@ -436,6 +436,10 @@ body {
   margin-left: 5px;
   color: #b59f5b;
 }
+.products-title{
+  position: relative;
+  text-align: center;
+}
 .product-wrp{
   display: flex;
   justify-content: space-between;
