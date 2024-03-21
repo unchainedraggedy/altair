@@ -13,6 +13,10 @@
           <a href="#0" class="header-logo">
             <img src="svg/noemi-logo.svg" alt="" class="logo">
           </a>
+         <div class="burger-wrp">
+          <input type="checkbox" name="" id="burger1" class="burger-toggle">
+          <label for="burger1" class="burger-label"><span class="burger-label-item"></span></label>
+         </div>
           <nav class="header-nav">
             <ul class="header-menu">
               <li class="menu-list">
@@ -55,63 +59,65 @@
     </header>
     <div class="container">
       <div class="trends-wrapper">
-        <h3 class="trends-title title-decor">
-          сейчас в тренде
-        </h3>
-        <div class="trends-scroll">
-          <article class="trends-article article1">
-            <div class="trends-content">
-              <div class="trends-tags">
-                <ul class="trends-tags-list">
-                  <li class="trends-tags-item">lifestyle</li>
-                  <li class="trends-tags-item">interior</li>
-                </ul>
-              </div>
-              <div class="trends-article-title">
-                <a href="/trend1">сейчас в тренде: сад на подоконнике</a>
-              </div>
+      <h3 class="trends-title title-decor">
+        сейчас в тренде
+      </h3>
+      <div class="trends-scroll">
+        <article class="trends-article article1">
+          <div class="trends-content">
+            <div class="trends-tags">
+              <span class="trends-tags-item">
+                lifestyle
+              </span>
+              <span class="trends-tags-item">
+                interior
+              </span>
             </div>
-          </article>
-          <article class="trends-article article2">
-            <div class="trends-content">
-              <div class="trends-tags">
-                <ul class="trends-tags-list">
-                  <li class="trends-tags-item">food</li>
-                </ul>
-              </div>
-              <div class="trends-article-title">
-                <a href="/trends2">сыры на красивых картинках из интернета: какие они на вкус?</a>
-              </div>
+            <div class="trends-article-title">
+              сейчас в тренде: сад на подоконнике
             </div>
-          </article>
-          <article class="trends-article article3">
-            <div class="trends-content">
-              <div class="trends-tags">
-                <ul class="trends-tags-list">
-                  <li class="trends-tags-item">lifestyle</li>
-                  <li class="trends-tags-item">travel</li>
-                </ul>
-              </div>
-              <div class="trends-article-title">
-                <a href="/trend3">собираемся в первый поход в горы</a>
-              </div>
+          </div>
+        </article>
+        <article class="trends-article article2">
+          <div class="trends-content">
+            <div class="trends-tags">
+              <span class="trends-tags-item">
+                food
+              </span>
             </div>
-          </article>
-          <article class="trends-article article4">
-            <div class="trends-content">
-              <div class="trends-tags">
-                <ul class="trends-tags-list">
-                  <li class="trends-tags-item">food</li>
-                  <li class="trends-tags-item">health</li>
-                </ul>
-              </div>
-              <div class="trends-article-title">
-                <a href="/trend">ейчас в тренде: сколько витамина c в лимонах?</a>
-              </div>
+            <div class="trends-article-title">
+              сыры на красивых картинках из интернета: какие они на вкус?
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
+        <article class="trends-article article3">
+          <div class="trends-content">
+            <div class="trends-tags">
+              <span class="trends-tags-item">
+                lifestyle
+              </span>
+              <span class="trends-tags-item">
+                travel
+              </span>
+            </div>
+            <div class="trends-article-title">
+              собираемся в первый поход в горы
+            </div>
+          </div>
+        </article>
+        <article class="trends-article article4">
+          <div class="trends-content">
+            <div class="trends-tags">
+              <span class="trends-tags-item">food</span>
+              <span class="trends-tags-item">healdth</span>
+            </div>
+            <div class="trends-article-title">
+              сейчас в тренде: сколько витамина c в лимонах?
+            </div>
+          </div>
+        </article>
       </div>
+    </div>
       <div class="content-wrp wrapper">
         <div class="content">
           <main class="main">
@@ -320,7 +326,7 @@
                 <img src="
                 images/151.jpg" alt="" class="post-img">
                 <div class="post-description">
-                  <time class="section">
+                  <time class="section-time">
                     14 июня 2019
                   </time>
                   <h4 class="post-title">
@@ -500,7 +506,7 @@
                 </ul>
               </div>
             </section>
-            <section class="feedback _hidden">
+            <section class="feedback ">
               <label for="popup1" class="feedback-title">обратная связь</label>
               <input type="checkbox" class="popup-toggle" id="popup1">
               <div class="popup">
@@ -554,7 +560,6 @@
           <h3 class="products-title title-decor">наши изделия</h3>
           <div class="product-wrp">
             <article class="product-article">
-              <!-- <img src="https://i.ibb.co/T0QFx4T/shop-item-desk1.jpg" alt="" class="product-img"> -->
               <picture>
                 <source srcset="images/shop-item-mobile1.jpg" media="(max-width: 640px)">
                 <souce srcset="images/shop-item-tablet1.jpg" media="max-width=1199px">
