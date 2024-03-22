@@ -444,13 +444,7 @@ body {
 .section-themes {
   font-weight: bold;
 }
-/* .themes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-} */
 .themes-list-item {
-  /* position: relative; */
   display: block;
   margin-bottom: 10px;
   padding-bottom: 15px;
@@ -776,7 +770,7 @@ body {
     background-image: url(../images/banner-mobile.jpg);
   }
   .header-title{
-    font-size: 40px;
+    font-size: 25px;
     margin: 1.5em auto;
   }
   .header-logo{
