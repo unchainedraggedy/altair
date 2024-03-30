@@ -218,8 +218,8 @@ body {
 .trends-article-title {
   font-size: 20px;
 }
-.trends-article-title{
-  font-size: 20px;
+.trends-article-title:hover{
+  color: #b59f5b;
 }
  .content {
   display: flex;
