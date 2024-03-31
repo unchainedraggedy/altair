@@ -790,10 +790,10 @@ body {
   }
   .product-wrp{
     display: block;
-    max-width: 100%;
+    /* max-width: 100%; */
   }
   .product-article{
-    width: 100%;
+    width: 90%;
     margin: auto;
   }
   .product-article:nth-child(n+2){
