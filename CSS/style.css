@@ -211,12 +211,14 @@ body {
   margin-right: 10px;
   font-size: 14px;
   color: #ad9857;
+  cursor: pointer;
 }
 .trends-tags-item:hover{
   text-decoration: underline;
 }
 .trends-article-title {
   font-size: 20px;
+  cursor: pointer;
 }
 .trends-article-title:hover{
   color: #b59f5b;
